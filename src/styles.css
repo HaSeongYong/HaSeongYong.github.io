@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+#chatContainer {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 75%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.serverMessage {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+}
+
+.userMessage {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+}
+
+.loadingMessage {
+    background-color: transparent;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+}
+
+#inputBox {
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+    border-top: 1px solid #ccc;
+}
+
+#userInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+    overflow: hidden;
+    height: 80px;
+    line-height: 1.5;
+}
+
+#sendButton {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#sendButton:hover {
+    background-color: #0056b3;
+}
+
+.loadingSpinner {
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
